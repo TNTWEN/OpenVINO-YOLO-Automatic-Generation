@@ -9,8 +9,11 @@ This repos is a tool prepared for Optimized YOLO which will be updated at the en
 
 # Environment
 python3.6  !!!!
+
 OpenVINO2020R4 :https://docs.openvinotoolkit.org/latest/index.html
+
 Win or Ubuntu
+
 Tensorflow 1.12.0
 # How to use
 You could use changed yolov3.cfg ,yolov3-spp.cfg,yolov4.cfg
@@ -202,10 +205,10 @@ python object_detection_demo_yolov3_async.py -i cam -m frozen_darknet_yolov3_mod
 
 
 For example:
-if we use yolov4 
+yolov4 
 ```
 cd yolov4parse
-python parse_config.py --cfg cfg/yolov3-spp.cfg
+python parse_config.py --cfg cfg/yolov4.cfg
 
 ```
 the output is
