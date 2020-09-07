@@ -350,7 +350,7 @@ def main():
     else:
         labels_map = None
 
-    input_stream = 1 if args.input == "cam" else args.input
+    input_stream = 0 if args.input == "cam" else args.input
 
     mode = Mode(Modes.USER_SPECIFIED)
     cap = cv2.VideoCapture(input_stream)
