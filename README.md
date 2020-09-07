@@ -5,8 +5,6 @@ This repos parses yolov3/yolov3-spp/yolov4's . cfg file to automatically generat
 As long as you have the .cfg file，you can convert it to .pb and OpenVINO.
 This means that code can be generated automatically even if the model(.cfg and .weights) is changed
 
-This repos is a tool prepared for Optimized YOLO which will be updated at the end of September.But you could try this tool now!
-
 # Environment
 python3.6  !!!!
 
