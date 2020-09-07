@@ -449,7 +449,7 @@ python convert_weights_pb.py --class_names cfg/coco.names --weights_file yolov4.
 
 "C:\Program Files (x86)\IntelSWTools\openvino\bin\setupvars.bat"
 
-python "C:\Program Files (x86)\IntelSWTools\openvino_2020.4.287\deployment_tools\model_optimizer\mo.py" --input_model frozen_darknet_yolov4_model.pb --transformations_config yolov4json --batch 1 --reverse_input_channels
+python "C:\Program Files (x86)\IntelSWTools\openvino_2020.4.287\deployment_tools\model_optimizer\mo.py" --input_model frozen_darknet_yolov4_model.pb --transformations_config yolov4.json --batch 1 --reverse_input_channels
 
 python object_detection_demo_yolov3_async.py -i cam -m frozen_darknet_yolov4_model.xml  -d CPU
 
