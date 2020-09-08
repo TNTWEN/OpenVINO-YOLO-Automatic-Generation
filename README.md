@@ -6,7 +6,7 @@ As long as you have the .cfg file，you can convert it to .pb and OpenVINO.
 This means that code can be generated automatically even if the model(.cfg and .weights) is changed
 
 # Environment
-python3.6  !!!!
+python3.x    (test on python3.6.5)
 
 OpenVINO2020R4 :https://docs.openvinotoolkit.org/latest/index.html
 
