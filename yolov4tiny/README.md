@@ -12,7 +12,7 @@ If you use other versions of OpenVINO, just change the relevant file path
 python parse_config.py --cfg cfg/yolov4-tiny.cfg
 ```
 
-copy all the output and paste here:
+copy all the output and paste [here](https://github.com/TNTWEN/OpenVINO-YOLO-Automatic-Generation/blob/4d4ae3361a33bb4552562295273242e557f2673b/yolov4tiny/yolo_v4_tiny.py#L81):
 
 Then we can convert .weights -> .pb -> OpenVINO
 
@@ -36,7 +36,7 @@ python "C:\Program Files (x86)\IntelSWTools\openvino_2020.4.287\deployment_tools
 python parse_config.py --cfg cfg/yolov4-tiny-3l.cfg --threel
 ```
 
-copy all the output and paste here:
+copy all the output and paste [here](https://github.com/TNTWEN/OpenVINO-YOLO-Automatic-Generation/blob/4d4ae3361a33bb4552562295273242e557f2673b/yolov4tiny/yolo_v4_tiny.py#L81)
 
 Then we can convert .weights -> .pb -> OpenVINO
 
