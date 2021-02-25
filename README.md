@@ -1,6 +1,6 @@
 # OpenVINO-YOLO-Automatic-Generation
 
-This repos parses yolov3/yolov3-spp/yolov4's . cfg file to automatically generate tensorflow1.x code
+This repos parses yolov3/yolov3-spp/yolov4/[yolov4-tiny/yolov4-tiny-3l](https://github.com/TNTWEN/OpenVINO-YOLO-Automatic-Generation/tree/master/yolov4tiny)'s . cfg file to automatically generate tensorflow1.x code
 
 As long as you have the .cfg file，you can convert it to .pb and OpenVINO.
 This means that code can be generated automatically even if the model(.cfg and .weights) is changed
