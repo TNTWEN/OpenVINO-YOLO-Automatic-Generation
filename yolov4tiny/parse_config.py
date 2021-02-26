@@ -122,7 +122,7 @@ if __name__=="__main__":
     "upsample_size = feat.get_shape().as_list()\nnet = _upsample(net, upsample_size, data_format)",\
     "net = tf.concat([net,feat], axis=1 if data_format == 'NCHW' else 3)",\
     "net = _conv2d_fixed_padding(net,%d,kernel_size=3)"%c[18],\
-    "detect_2 = _detection_layer(net, num_classes, _ANCHORSTINY[1:4], img_size, data_format)"
+    "detect_2 = _detection_layer(net, num_classes, _ANCHORSTINY[1:4], img_size, data_format)",
     "detect_2 = tf.identity(detect_2, name='detect_2')",
     "detections = tf.concat([detect_1, detect_2], axis=1)\ndetections = tf.identity(detections, name='detections')"]
         for x in modeltiny:
