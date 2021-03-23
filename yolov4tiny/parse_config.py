@@ -81,11 +81,10 @@ if __name__=="__main__":
         modeltiny3l=["net = _conv2d_fixed_padding(inputs,%d,kernel_size=3,strides=2)"%c[0],\
     "net = _conv2d_fixed_padding(net, %d, kernel_size=3,strides=2)"%c[1],\
     "net,_ = _tiny_res_block(net,%d,%d,%d,%d,data_format)"%(c[2],c[3],c[4],c[5]),\
-    "net,_ = _tiny_res_block(net,%d,%d,%d,%d,data_format)"%(c[6],c[7],c[8],c[9]),\
+    "net,feat_1 = _tiny_res_block(net,%d,%d,%d,%d,data_format)"%(c[6],c[7],c[8],c[9]),\
     "net,feat = _tiny_res_block(net,%d,%d,%d,%d,data_format)"%(c[10],c[11],c[12],c[13]),\
     "net = _conv2d_fixed_padding(net,%d,kernel_size=3)"%c[14],\
-    "feat2=net",\
-    "net=_conv2d_fixed_padding(feat2,%d,kernel_size=1)"%c[15],\
+    "net=_conv2d_fixed_padding(net,%d,kernel_size=1)"%c[15],\
     "route = net",\
     "net = _conv2d_fixed_padding(route,%d,kernel_size=3)"%c[16],\
     "detect_1 = _detection_layer(net, num_classes, _ANCHORS[6:9], img_size, data_format)",\
@@ -97,8 +96,8 @@ if __name__=="__main__":
     "detect_2 = _detection_layer(net, num_classes, _ANCHORS[3:6], img_size, data_format)",\
     "detect_2 = tf.identity(detect_2, name='detect_2')",
     "net = _conv2d_fixed_padding(route,%d,kernel_size=1)"%c[19],\
-    "upsample_size = feat.get_shape().as_list()\nnet = _upsample(net, upsample_size, data_format)",\
-    "net = tf.concat([net,feat], axis=1 if data_format == 'NCHW' else 3)",\
+    "upsample_size = feat_1.get_shape().as_list()\nnet = _upsample(net, upsample_size, data_format)",\
+    "net = tf.concat([net,feat_1], axis=1 if data_format == 'NCHW' else 3)",\
     "net = _conv2d_fixed_padding(net,%d,kernel_size=3)"%c[20],\
     "detect_3 = _detection_layer( net, num_classes, _ANCHORS[0:3], img_size, data_format)",\
     "detect_3 = tf.identity(detect_3, name='detect_3')",\
