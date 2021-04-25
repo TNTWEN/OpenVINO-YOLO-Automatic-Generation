@@ -93,6 +93,7 @@ if __name__=="__main__":
     "upsample_size = feat.get_shape().as_list()\nnet = _upsample(net, upsample_size, data_format)",\
     "net = tf.concat([net,feat], axis=1 if data_format == 'NCHW' else 3)",\
     "net = _conv2d_fixed_padding(net,%d,kernel_size=3)"%c[18],\
+    "route = net",\
     "detect_2 = _detection_layer(net, num_classes, _ANCHORS[3:6], img_size, data_format)",\
     "detect_2 = tf.identity(detect_2, name='detect_2')",
     "net = _conv2d_fixed_padding(route,%d,kernel_size=1)"%c[19],\
